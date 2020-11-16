@@ -22,6 +22,7 @@ const fetchJson = (url, options = {}) => {
   }
   // add your own headers here
   // options.headers.set('content-type', 'application/json');
+  options.headers.set('Access-Control-Expose-Headers', 'X-Total-Count')
   options.headers.set('X-Custom-Header', 'foobar');
   return fetchUtils.fetchJson(url, options);
 }
